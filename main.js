@@ -1,23 +1,22 @@
-// 1. При помощи модального окна prompt выведите в консоль или через alert введенный в 
+// 1. При помощи модального окна prompt выведите в консоль или через alert введенный в
 // окно текст.
 // Примерный алгоритм
 // - введите текст (prompt)
 // - {введенный текст} (alert)
 
-let youText = prompt('Введите текст');
+let youText = prompt("Введите текст");
 alert(youText);
 
-
-// 2. Написать программу, которая при помощи окон prompt позволит ввести и сложить три 
+// 2. Написать программу, которая при помощи окон prompt позволит ввести и сложить три
 // числа.
 // Примерный алгоритм
 // - введите первое число (prompt)
 // - введите второе число (prompt)
 // - сумма = {сумма чисел} (alert)
 // Итоговую сумму вывести в консоль или через alert.
-let firstNumber = +prompt('Введите 1 число')
-let secondNumber = +prompt('Введите 2 число')
-let thirdNumber = +prompt('Введите 3 число')
+let firstNumber = +prompt("Введите 1 число");
+let secondNumber = +prompt("Введите 2 число");
+let thirdNumber = +prompt("Введите 3 число");
 let sum = firstNumber + secondNumber + thirdNumber;
 alert(sum);
 //console.log(sum);
@@ -25,22 +24,22 @@ alert(sum);
 // 3. Напишите программу, которая:
 // - запрашивает имя пользователя (prompt);
 // - запрашивает возраcт пользователя (prompt);
-// - если возраст пользователя больше либо равен 18 выводит сообщение в духе "Добро 
+// - если возраст пользователя больше либо равен 18 выводит сообщение в духе "Добро
 // пожаловать {имя пользователя}" (alert);
-// - если возраст пользователя меньше 18 выводит сообщение в духе "Простите, {имя 
+// - если возраст пользователя меньше 18 выводит сообщение в духе "Простите, {имя
 // пользователя}, доступ закрыт".
 
-let firstName = prompt('Введите свое имя');
-let age = prompt('введите свой возраст');
-if (age >= 18){
-    alert(firstName +''+ 'Добро пожаловать ')
-}else{
-    alert(firstName +''+ 'Для вас доступ закрыт ')
+let firstName = prompt("Введите свое имя");
+let age = prompt("введите свой возраст");
+if (age >= 18) {
+  alert(firstName + "" + "Добро пожаловать ");
+} else {
+  alert(firstName + "" + "Для вас доступ закрыт ");
 }
 
-// 4. Напишите программу, позволит вывести в консоль название для класса html элемента, 
-// которая будет работать по следующему алгоритму. Программа предполагает 
-// последовательное суммирование названий блока, элемента и модификатора, если они 
+// 4. Напишите программу, позволит вывести в консоль название для класса html элемента,
+// которая будет работать по следующему алгоритму. Программа предполагает
+// последовательное суммирование названий блока, элемента и модификатора, если они
 // будут обозначены.
 // Хотите ввести название блока? (confirm)
 // - нет - вывести в консоль сообщение о том, что элементу не присвоен класс (confirm).
@@ -49,70 +48,65 @@ if (age >= 18){
 // - нет - вывести в консоль название блока. Закончить выполнение скрипта.
 // - да - вывести окно для ввода названия элемента (prompt)
 // Хотите ввести название модификатора? (confirm)
-// - да - вывести окно для ввода названия элемента (prompt). Вывести в консоль итоговое 
+// - да - вывести окно для ввода названия элемента (prompt). Вывести в консоль итоговое
 // название класса (блок + элемент + модификатор).
 // - нет - вывести в консоль итоговое название (блок + элемент)
 
-let conf = confirm('Хотите ввести название блока ?');
-let moName = '';
-let elName = '';
-let divNam = '';
-if (conf){
-    divNam = prompt('Введите имя блока');
-    let confElement = confirm('Хотите ввести название элемента ?');
-        if (confElement){
-            elName = prompt('Введите название элемента');
-            let confMod = confirm('Хотите ввести модификатор элемента ?');
-            if(confMod){
-              moName = prompt('Введите модификатор');
-            }else{
-                
-            }
-        }else{
-            let confMod = confirm('Хотите ввести модификатор элемента ?');
-            if(confMod){
-                moName = prompt('Введите модификатор');
-            } 
-        }
-   
-       
-}else{
-    alert('Элементу не присвоен класс');
+let conf = confirm("Хотите ввести название блока ?");
+let moName = "";
+let elName = "";
+let divNam = "";
+if (conf) {
+  divNam = prompt("Введите имя блока");
+  let confElement = confirm("Хотите ввести название элемента ?");
+  if (confElement) {
+    elName = prompt("Введите название элемента");
+    let confMod = confirm("Хотите ввести модификатор элемента ?");
+    if (confMod) {
+      moName = prompt("Введите модификатор");
+    } else {
+    }
+  } else {
+    let confMod = confirm("Хотите ввести модификатор элемента ?");
+    if (confMod) {
+      moName = prompt("Введите модификатор");
+    }
+  }
+} else {
+  alert("Элементу не присвоен класс");
 }
-let suma = divNam  + elName + moName; 
-alert(suma) ;
+let suma = divNam + elName + moName;
+alert(suma);
 
-
-// 5. Написать программу, которая производит одну из четырех арифметических операций 
+// 5. Написать программу, которая производит одну из четырех арифметических операций
 // с двумя числами по выбору пользователя.
-// Выбор нужной арифметической операции напрямую подскажите пользователю в тексте 
+// Выбор нужной арифметической операции напрямую подскажите пользователю в тексте
 // окна.
 // Примерный алгоритм
 // - введите первое число (prompt);
 // - введите второе число (prompt);
 // - выберите нужную арифметическую операцию (div, plus, mult, minus) (prompt);
 // - вывести итоговый результат в консоль / alert.
-let firstNum = +prompt('Введите первое число');
-let secondNum = +prompt('Введите первое число');
-let promOperations = prompt('Введите операцию(plus, minus, del, mult)');
+let firstNum = +prompt("Введите первое число");
+let secondNum = +prompt("Введите первое число");
+let promOperations = prompt("Введите операцию(plus, minus, del, mult)");
 let mathPlus = firstNum + secondNum;
 let mathMinus = firstNum - secondNum;
 let mathDel = firstNum / secondNum;
 let mathMultiple = firstNum * secondNum;
 
-if(isNaN(firstNum && secondNum) == false){
-    if (promOperations === 'plus'){
-        alert(mathPlus);
-    }else if(promOperations === 'minus'){
-        alert(mathMinus);
-    }else if(promOperations === 'del'){
-        alert(mathDel);
-    }else if(promOperations === 'mult'){
-        alert(mathMultiple);
-    }else {
-        alert('вы ничего не выбрали')
-    }
-}else{
-    alert('вы ввели нечисловое значение')
+if (isNaN(firstNum && secondNum) == false) {
+  if (promOperations === "plus") {
+    alert(mathPlus);
+  } else if (promOperations === "minus") {
+    alert(mathMinus);
+  } else if (promOperations === "del") {
+    alert(mathDel);
+  } else if (promOperations === "mult") {
+    alert(mathMultiple);
+  } else {
+    alert("вы ничего не выбрали");
+  }
+} else {
+  alert("вы ввели нечисловое значение");
 }
-
