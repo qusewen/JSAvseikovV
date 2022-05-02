@@ -140,14 +140,15 @@ if (firstNumScore < secondNumScore) {
   }
 }
 
-// 4.IV. Создайте цикл, который при любом диапазоне перебираемых в нем чисел,
+// 4. Создайте цикл, который при любом диапазоне перебираемых в нем чисел,
 // прерывался бы на седьмой итерации.
-let firstMin = -10;
-let secondMax = 10;
-for (let i = 1; i < 8; i++) {
-  console.log(`итерация № ${i}`);
-  for (firstMin; firstMin < secondMax; firstMin++) {
-    console.log(firstMin);
+
+const b = Infinity;
+for (let i = 1; i < b; i++){
+  let count = i;
+  console.log(`Итерация № ${count}`)
+  if (i === 7){
+    break
   }
 }
 
